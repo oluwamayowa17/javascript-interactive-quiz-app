@@ -18,12 +18,10 @@ Installation
 Clone the repository:
 
 
-git clone https://github.com/yourusername/quiz-app.git
+git clone https://github.com/oluwamayowa17/javascript-interactive-quiz-app
 Navigate to the project directory:
 
 cd quiz-app
 Open index.html in your web browser:
 
 open index.html
-
-C
