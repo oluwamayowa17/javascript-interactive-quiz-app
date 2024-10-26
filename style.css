@@ -34,14 +34,13 @@ body{
 .header #timer{
     margin: 0 auto ;
     font-size: 10px;
-    background-color: #001e4d;
+    /* background-color: #001e4d; */
     padding: 5px 10px;
-    color: #ffffff;
+    color: #000;
     display: none;
 }
 
 .header #timer span{
-    background-color: #222;
     padding: 5px 8px;
 }
 

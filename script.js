@@ -104,10 +104,10 @@ let time = 60;
 startBtn.addEventListener('click', startQuiz)
 
 
-function handleTime(){
-    timer.textContent = time
+function handleTime() {
+    timer.textContent = time;
 
-    let timerInterval = setInterval(() => {
+    timerInterval = setInterval(() => {
         time--;
         timer.textContent = time;
 
@@ -116,16 +116,19 @@ function handleTime(){
             showScore();
         }
     }, 1000);
-
 }
 
 
-function startQuiz(){
+function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    startBtn.style.display = 'none'
-    document.querySelector('#timer').style.display = 'block'
-    handleTime()
+    time = 60; 
+    // clearInterval(timerInterval); 
+
+    startBtn.style.display = 'none';
+    document.querySelector('#timer').style.display = 'block';
+
+    handleTime();
     showQuestions();
 }
 
@@ -195,10 +198,12 @@ function handleNextQUestion(){
     
 }
 
-function showScore(){
-    resetState()
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`
-    nextButton.innerHTML = 'Play Again'
-    nextButton.style.display = 'block'
+function showScore() {
+    clearInterval(timerInterval); 
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = 'Play Again';
+    nextButton.style.display = 'block';
+    nextButton.addEventListener('click', startQuiz)
 }
 
